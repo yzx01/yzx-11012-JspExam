@@ -37,6 +37,10 @@ public class Language implements Serializable{
 	public Language(String name) {
 		this.name = name;
 	}
+	public Language(Integer language_id, String name) {
+		this.language_id = language_id;
+		this.name = name;
+	}
 	
 	
 

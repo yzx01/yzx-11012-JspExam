@@ -12,12 +12,13 @@ public class CustomerDAOImpl implements CustomerDAO {
 	public boolean customerExits(Connection conn, String name) {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
+		boolean flag = false;
 		try {
 			ps = conn.prepareStatement("SELECT first_name FROM customer WHERE first_name=?");
 			ps.setString(1, name);
 			rs = ps.executeQuery();
 			if (rs.next()) {
-				return true;
+				flag = true;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -37,7 +38,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 				}
 			}
 		}
-		return false;
+		return flag;
 
 	}
 

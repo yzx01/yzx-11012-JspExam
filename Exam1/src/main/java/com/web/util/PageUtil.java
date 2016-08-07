@@ -13,9 +13,9 @@ import com.web.bean.Temp;
 
 public class PageUtil {
 	
-	public List getAllFilmByPage(Connection conn,int start,int count){
+	public ArrayList getAllFilmByPage(Connection conn,int start,int count){
 		ArrayList list = new ArrayList();
-		String sql = "SELECT f.film_id,f.title,f.description,l.name FROM film f,language l WHERE f.language_id = l.language limit ?,?";
+		String sql = "SELECT f.film_id,f.title,f.description,l.name FROM film f,language l WHERE f.language_id = l.language_id limit ?,?";
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 	     try {
@@ -88,7 +88,7 @@ public class PageUtil {
 				}
 			}
 		}
-		totalpage = totalcount%10==0?totalcount/10:totalcount/10+1;
+		totalpage = totalcount%8==0?totalcount/8:totalcount/8+1;
 		return totalpage;
 	}
 

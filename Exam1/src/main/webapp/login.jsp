@@ -5,21 +5,48 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录页面</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-	#container{
-		margin:40px auto;
-		width:75%;
-	    
+	#body{
+		margin-top:100px;
+		width:60%;
+		text-align:center;
+		margin-left:200px;
+		margin-right:270px;
+	}
+	#id{
+		padding-left:-50px;
+	}
+	select{
+		margin-left:-95%;
+		margin-top:40px;
+	}
+	#button{
+		margin-right:100px;
 	}
 </style>
 </head>
 <body>
-	<div id= "container">
-		<h1>用户登录</h1>
-		<div id="login_system">
-		<form action="loginservlet" method="post">
-			登录名:<input type="text" name="user_name" ><br/>
-				  <input type="submit" value="登录">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">登录界面</a>
+		</div>
+	</div>
+	</nav>
+	<div class="container col-sm-offset-2">
+		<div id = "body">
+		<form action="loginservlet" method="post" class="form-horizontal " role="form">
+			<div class="form-group">
+				<label class="col-sm-1  control-label "  >User</label>
+				<div class="col-sm-6">
+					<input type="text" name="user_name" class="form-control col-sm-2" placeholder="User">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<button type="submit" class="btn btn-info col-sm-2 col-sm-offset-5" id="button">Login</button>
+			</div>
 		</form>
 		</div>
 	</div>

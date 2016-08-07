@@ -5,28 +5,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>主页</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-	#head{
-		margin-top:20px auto;
-		text-align: center;
+	#body{
+		padding-left:-50px;
+		padding-top:100px;
 	}
-	#middle{
-		text-align:center;
+	span{
+		font-size:20px;
 	}
 </style>
 </head>
 <body>
-     <div id="container">
-     	<div id="head">
-     		<h1>电影租赁系统</h1>
-     	</div>
-     	<div id = "middle">
-     		<ul style="text-align:center">
-     			<li><a href="">查看所有电影</a></li>
-     			<li><a href="">查看所有电影</a></li>
-     		</ul>
-     	</div>
-     </div>	
-     </center>
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">主页</a>
+		</div>
+	</div>
+	</nav>
+	
+	<div class="container col-sm-offset-2">
+		
+		<div id = "body">
+			<ul>
+				<li><a href="login.jsp"><span>登录界面</span></a></li>
+				
+			</ul>
+		</div>
+		
+	</div>
 </body>
 </html>

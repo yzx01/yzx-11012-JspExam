@@ -88,5 +88,13 @@ public class Film implements Serializable{
 		this.title = title;
 		this.description = description;
 	}
+	public Film(Integer film_id, String title, String description, Integer language_id) {
+		this.film_id = film_id;
+		this.title = title;
+		this.description = description;
+		this.language_id = language_id;
+	}
+	
+	
     
 }

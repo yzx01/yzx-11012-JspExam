@@ -2,3 +2,5 @@
 
 
 在cmd进入Exam1目录下运行mvn jetty:run
+
+在浏览器输入localhost:8080即可
