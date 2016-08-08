@@ -20,10 +20,6 @@
 	padding-left: -50px;
 }
 
-select {
-	margin-left: -95%;
-	margin-top: 40px;
-}
 
 #button {
 	margin-right: 100px;
@@ -62,12 +58,13 @@ select {
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-1 control-label">Name</label> 
-					<select class="span1" name="language_id">
+					<label class="col-sm-1 control-label">Name</label>
+					<div class="cols-sm-6">
+					<select class="form-control" name="language_id">
 					   <#list languageList as language> 
  	                        <li><option value="${language.language_id}">${language.name}</option></li>  
                        </#list>
-					</select>
+					</select></div>
 				</div>
 
 				<div class="form-group">
